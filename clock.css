@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: indianred;
+    font-family: "consolas";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    position: relative;
+    width: 50%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container h1 {
+    color: white;
+    font-size: 4em;
+}
+.box{
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 20%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.4),
+                inset 5px 5px 20px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+    backdrop-filter: blur(20px);
+}
+.container span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2));
+    animation: to-right 1s infinite;
+}
+@keyframes to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+.container span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2));
+    animation: to-bottom 1s infinite 1.2s;
+}
+@keyframes to-bottom {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+.container span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.2));
+    animation: to-left 1s infinite 2.4s;
+}
+@keyframes to-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.container span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.2));
+    animation: to-top 1s infinite 2.7s;
+}
+@keyframes to-top {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+.logo {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-family: 'B612', sans-serif;
+}
+.logo i {
+    font-size: 50px;
+    color: white;
+}
+.logo h1 {
+    padding: 0 10px;
+}
+.logo h1 span {
+    color: white;
+    font-size: 40px;
+}
